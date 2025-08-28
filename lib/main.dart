@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/home', page: HomeView.new),
         GetPage(name: '/post-query', page: PostQueryView.new),
         GetPage(name: '/query-responses', page: QueryResponsesView.new),
-  GetPage(name: '/notifications', page: NotificationsView.new),
+        GetPage(name: '/notifications', page: NotificationsView.new),
       ],
       home: const _AuthGate(),
     );

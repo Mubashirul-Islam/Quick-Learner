@@ -43,7 +43,8 @@ class NotificationsView extends StatelessWidget {
                       return const SizedBox.shrink();
                     }
                     return StreamBuilder<
-                        DocumentSnapshot<Map<String, dynamic>>>(
+                      DocumentSnapshot<Map<String, dynamic>>
+                    >(
                       stream: FirebaseFirestore.instance
                           .collection('students')
                           .doc(sid)
@@ -51,17 +52,19 @@ class NotificationsView extends StatelessWidget {
                       builder: (context, studentSnap) {
                         String name = '-';
                         if (studentSnap.hasData && studentSnap.data!.exists) {
-                          name = (studentSnap.data!.data()?['name']
-                                  as String?)
-                              ?.trim()
-                              .isNotEmpty ==
-                              true
-                          ? (studentSnap.data!.data()?['name'] as String)
-                          : '-';
+                          name =
+                              (studentSnap.data!.data()?['name'] as String?)
+                                      ?.trim()
+                                      .isNotEmpty ==
+                                  true
+                              ? (studentSnap.data!.data()?['name'] as String)
+                              : '-';
                         }
                         return Card(
                           margin: const EdgeInsets.symmetric(
-                              horizontal: 12, vertical: 8),
+                            horizontal: 12,
+                            vertical: 8,
+                          ),
                           child: Padding(
                             padding: const EdgeInsets.all(12.0),
                             child: Column(
@@ -70,11 +73,13 @@ class NotificationsView extends StatelessWidget {
                                 ListTile(
                                   contentPadding: EdgeInsets.zero,
                                   leading: const CircleAvatar(
-                                      child: Icon(Icons.person)),
+                                    child: Icon(Icons.person),
+                                  ),
                                   title: Text(
                                     name,
                                     style: const TextStyle(
-                                        fontWeight: FontWeight.w600),
+                                      fontWeight: FontWeight.w600,
+                                    ),
                                   ),
                                   subtitle: Text(
                                     '$name accepted your application. Please join the video call ASAP.',
