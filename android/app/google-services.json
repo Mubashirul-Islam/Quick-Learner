@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "588610136214",
+    "project_id": "quick-learner-a6968",
+    "storage_bucket": "quick-learner-a6968.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588610136214:android:14fefe6bf10ac2ae04bab7",
+        "android_client_info": {
+          "package_name": "com.example.quick_learner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS8I7_jR365xbw_gkbLCzCT3LK9BZhae0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
