@@ -38,6 +38,7 @@ class NotificationsView extends StatelessWidget {
                   itemCount: docs.length,
                   itemBuilder: (context, i) {
                     final data = docs[i].data();
+                    final sessionId = docs[i].id;
                     final sid = data['sid'] as String?;
                     if (sid == null || sid.isEmpty) {
                       return const SizedBox.shrink();
@@ -88,7 +89,12 @@ class NotificationsView extends StatelessWidget {
                                 const SizedBox(height: 8),
                                 Center(
                                   child: FilledButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Get.toNamed(
+                                        '/call',
+                                        arguments: sessionId,
+                                      );
+                                    },
                                     child: const Text('Join'),
                                   ),
                                 ),

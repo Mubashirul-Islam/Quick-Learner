@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../controllers/auth_controller.dart';
+import '../../controllers/theme_controller.dart';
 import 'change_password_view.dart';
 
 class SettingsView extends StatelessWidget {
@@ -8,21 +9,25 @@ class SettingsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeController = Get.find<ThemeController>();
+
     return ListView(
       children: [
-        const ListTile(
-          leading: Icon(Icons.notifications),
-          title: Text('Notification'),
-        ),
-        const Divider(height: 0),
-        const ListTile(
-          leading: Icon(Icons.payment),
-          title: Text('Payment Method'),
-        ),
-        const Divider(height: 0),
-        const ListTile(
-          leading: Icon(Icons.brightness_6),
-          title: Text('Change Theme'),
+        Obx(
+          () => ListTile(
+            leading: Icon(
+              themeController.isDarkMode ? Icons.dark_mode : Icons.light_mode,
+            ),
+            title: const Text('Dark Theme'),
+            trailing: Switch(
+              value: themeController.isDarkMode,
+              onChanged: (value) {
+                debugPrint('Switch toggled to: $value');
+                themeController.toggleTheme();
+                debugPrint('Theme toggle method called');
+              },
+            ),
+          ),
         ),
         const Divider(height: 0),
         ListTile(
