@@ -126,7 +126,3 @@ flutter test
 - Android build issues with Firebase: verify `google-services.json` path and that `com.google.gms.google-services` plugin is applied in `android` gradle files.
 - Camera/mic not working: confirm runtime permissions (Android 6+), and Info.plist keys on iOS.
 - Agora connection fails: check App ID/token, network permissions, and that your channel name matches on both ends.
-
-## License
-
-This repository does not declare a license. Add one (e.g., MIT) if you intend to open-source it.
