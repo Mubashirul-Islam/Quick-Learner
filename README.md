@@ -4,19 +4,13 @@ A Flutter app that connects students and tutors with authentication, user roles,
 
 ## Features
 
-- Email/password authentication (Firebase Auth)
-- User roles: Student or Tutor (stored in Firestore)
-- Profile documents in Firestore:
-	- students/{uid}: sid, email, name?, edu?
-	- tutors/{uid}: tid, email, name?, edu?, fee?, rating?
-- Theming with light/dark modes (Material 3)
-- Screens (navigated via GetX routes):
-	- /login, /register
-	- /home
-	- /post-query, /query-responses, /notifications
-	- /call (video calling via Agora)
-- Permissions handling (camera/microphone)
-- Local storage with Shared Preferences (for simple client state)
+- Role-based Login and Registration system for students and tutors.
+- Role-based separate profile page for students and tutors with profile edit and delete features.
+- Students can add their queries in detail for a tutor to respond.
+- Students can choose their tutor among the respondents based on qualification, rating and session fee.
+- Instant video call session between student and tutor.
+- Students can rate their tutor after each session.
+- Easy switching between Light and Dark mode.
 
 ## Tech Stack
 
@@ -25,6 +19,10 @@ A Flutter app that connects students and tutors with authentication, user roles,
 - Firebase: Core, Auth, Cloud Firestore
 - Real‑time video: Agora RTC Engine
 - permission_handler, shared_preferences
+
+## Video Demo 
+
+https://youtu.be/gP8gT7L95ts?si=aMrjJIJuGLzRc-uX
 
 ## Project Structure (high level)
 
